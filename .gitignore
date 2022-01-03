@@ -1,0 +1,8 @@
+main
+*~
+*.o
+*.a
+*.sw*
+*dSYM*
+out*
+tags
