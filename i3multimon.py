@@ -19,6 +19,11 @@ print(nums)
 
 if __name__ == '__main__':
     d = sys.argv[1]
+
+    # if d == 'init': # mod+Home
+    #     spacing = sys.argv[2] # how far apart to put each monitor
+    #     os.system('i3-msg 
+
     change = None
     if d == 'next':
         change = 1
@@ -26,6 +31,7 @@ if __name__ == '__main__':
         change = -1
 
     # we do everything in parallel to avoid the shift-overwrite error
+    # for some reason Popen with the list works on negatives while os.system and manually typing it does not
     newnums = [x + change for x in nums]
     for i in range(len(displays)):
         subprocess.Popen(['i3-msg', 'workspace ' + str(nums[i])]) # select the proper monitor
