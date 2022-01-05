@@ -6,3 +6,4 @@ main
 *dSYM*
 out*
 tags
+__pycache__/**
