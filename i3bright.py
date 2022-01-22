@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+#TODO if 0, or 100, already, then don't do anytihng, don't notify. same for volume. TODO!!!
 import sys, os
 from i3grid import exshell
 d = sys.argv[1]
